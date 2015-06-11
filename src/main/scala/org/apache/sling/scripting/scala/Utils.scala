@@ -62,7 +62,7 @@ object Utils {
     if (!Character.isJavaIdentifierStart(identifier.charAt(0))) 
       id.append('_');
     
-    for (val ch <- identifier) {
+    for (ch <- identifier) {
       if (Character.isJavaIdentifierPart(ch) && ch != '_') id.append(ch)
       else if (ch == '.') id.append('_')
       else id.append(mangleChar(ch))
